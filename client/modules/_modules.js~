@@ -1,16 +1,20 @@
 Modules.client = {};
 
-let forcast = () => {
-  return Forcasts.findOne();
+var forcast = function() {
+	var f = Forcasts.findOne();
+  return f;
 };
 
-var daily = [];
+
 
 let summary = () => {
-  	for(i=0;i<forcast.daily.data.length;i++){
-		daily[i] = forcast.data.daily.data[i].summary;
-		console.log(daily[i]);
+	var daily = [];
+  	for(i=0;i<forcast().data.daily.data.length;i++){
+		daily[i] = forcast().data.daily.data[i];
+		console.log(i);
+	
 	}
+	return daily;
 };
 
 Modules.client.summary = summary;
