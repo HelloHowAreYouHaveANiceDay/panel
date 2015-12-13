@@ -1,4 +1,3 @@
-Modules.client = {};
 
 var forecast = function() {
 	var f = Forecasts.findOne();
@@ -7,7 +6,7 @@ var forecast = function() {
 
 
 
-let summary = () => {
+let dailyArray = () => {
 	var daily = [];
   	
 	for(i=0;i<forecast().data.daily.data.length;i++){
@@ -19,5 +18,10 @@ let summary = () => {
 	return daily;
 };
 
-Modules.client.summary = summary;
-Modules.client.forecast = forecast;
+let getDaily = (p) =>{
+	var array = dailyArray;
+	var resultArray = [];
+	_.each(dailyArray, function(e){return e(p);});
+};
+
+Modules.client.dailyArray = dailyArray;

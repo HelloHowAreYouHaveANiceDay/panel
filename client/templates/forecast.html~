@@ -1,0 +1,3 @@
+<template name="forecast">
+<p>{{forecast.data.timezone}}</p>
+</template>

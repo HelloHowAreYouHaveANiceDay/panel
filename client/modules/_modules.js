@@ -1,22 +1,22 @@
 Modules.client = {};
 
-var forcast = function() {
-	var f = Forcasts.findOne();
+var forecast = function() {
+	var f = Forecasts.findOne();
   return f;
 };
 
 
 
-let summary = () => {
+let dailyArray = () => {
 	var daily = [];
-  	for(i=0;i<forcast().data.daily.data.length;i++){
-		daily[i] = forcast().data.daily.data[i];
+  	
+	for(i=0;i<forecast().data.daily.data.length;i++){
+		daily[i] = forecast().data.daily.data[i];
 		console.log(i);
 	
-	}
+	};
+
 	return daily;
 };
 
-Modules.client.summary = summary;
-Modules.client.forcast = forcast;
-Modules.client.daily = daily;
+Modules.client.dailyArray = dailyArray;
