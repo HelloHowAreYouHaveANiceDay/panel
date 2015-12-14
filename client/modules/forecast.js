@@ -7,13 +7,7 @@ let forecast = () => {
 
 
 let forecastArray = () => {
-	var a = new Array()
 
-	_.each(forecast().data.daily.data, function(obj){
-	a.push(obj.time);
-	});
-
-	return a;
 };
 
 
