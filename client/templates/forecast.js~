@@ -1,5 +1,5 @@
 Template.forecast.helpers({
-	forecast : function(){
-		return forecasts.findOne();}
+	 forecast : function(){
+		return Modules.client.dailyArray();}
 		
 });

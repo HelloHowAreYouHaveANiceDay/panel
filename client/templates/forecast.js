@@ -1,5 +1,5 @@
 Template.forecast.helpers({
-	forecast : function(){
+	 forecast : function(){
 		return Forecasts.findOne();}
 		
 });
