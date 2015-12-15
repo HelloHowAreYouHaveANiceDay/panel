@@ -1,14 +1,5 @@
 Template.forecast.helpers({
 	forecast : function(){
-		return Forecasts.findOne();},
-	getForecastDate : function(d){
-		var date = new Date(d);
-		return date;
-	},
-	getDailyForecast : function(){
-		var f = Forecasts.findOne();
-		return f.data.daily.data;
-	}
-	
+		return Forecasts.findOne();}
 		
 });

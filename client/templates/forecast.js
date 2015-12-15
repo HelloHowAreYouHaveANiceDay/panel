@@ -1,10 +1,9 @@
 Template.forecast.helpers({
 	forecast : function(){
 		return Forecasts.findOne();},
-	getForecastDate : function(d){
+getForecastDate : function(d){
 		var date = new Date(d);
 		return date;
 	}
-	
 		
 });

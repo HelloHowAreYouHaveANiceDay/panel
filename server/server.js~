@@ -1,10 +1,9 @@
 Meteor.methods({
 	getForecast : function(){
-	var forecast = HTTP.get('https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7146,-74.0071');
+		var date = new Date;
+	console.log('https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7146,-74.0071,'+ date.toISOString());	
+	//var forecast = HTTP.get( );
 
-	var forecast_id = Forecasts.insert(forecast);	
-	console.log(forecast_id);
-	alert("data recieved");	
 }
 
 
