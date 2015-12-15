@@ -1,16 +1,19 @@
 <template name="forecast">
-<table>
-	<tr>
-	<th>summary</th>
-</tr>
 <tr>
-
-
-<td>{{forecast}}</td>	
-
+	<td>
+	The forcast is: {{getForecastDate(forecast.data.currently.time)}}
+	</td>
+	<td>
+		{{getDailyForecast}}
+	</td>
+	</tr>
+	<tr>
+	<th>time</th>
+	<th>summary</th>
+	<th>icon</th>
+	<th>temperature</th>
 </tr>
-</table>
-
-{{> d3f}}
-
+	{{#each forecast.data.hourly.data}}
+	{{> hourlyForecast}}
+	{{/each}}
 </template>
