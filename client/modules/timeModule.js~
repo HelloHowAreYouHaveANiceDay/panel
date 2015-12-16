@@ -1,0 +1,7 @@
+let convertTime = (timestamp) => {
+	m = moment(timestamp*1000);
+	return  m.format("dd,YY MM Do , h:mm:ss a");
+
+}
+
+Modules.client.convertTime = convertTime;

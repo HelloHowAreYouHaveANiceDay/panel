@@ -1,6 +1,7 @@
 Template.currentForecast.helpers({
-	getForecastDate : function(d){
-		var date = new Date(d);
-		return date;
+	getForecastDate : function(t){
+		var d = Modules.client.convertTime(t);
+		console.log(this.time);
+		return d;
 	}
 	});

@@ -1,6 +1,6 @@
 <template name="hourlyForecast">
 <tr>
-	<td>{{Date(this.time)}}</td>
+	<td>{{getForecastTime(this.time)}}</td>
 
 	<td>{{this.summary}}</td>
 	<td>{{this.icon}}</td>

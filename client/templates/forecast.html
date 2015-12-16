@@ -1,7 +1,7 @@
 <template name="forecast">
 <tr>
 	<td>
-	The forcast is: {{getForecastDate(forecast.data.currently.time)}}
+	The forcast is: 
 	</td>
 	<td>
 		{{getDailyForecast}}
@@ -12,9 +12,10 @@
 	<th>summary</th>
 	<th>icon</th>
 	<th>temperature</th>
-	<th>nearest storm</th>
-	<th>nearest storm bearing </th>
-	<th>precipitation intensity </th>
+	<th>precipitation type</th>
+	<th>wind speed</th>
+	<th>cloud cover</th>
+	<th>humidity</th>
 </tr>
 {{#with forecast.data.currently}}
 	{{> currentForecast}}
