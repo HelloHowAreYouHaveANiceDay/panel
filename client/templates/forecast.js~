@@ -3,7 +3,11 @@ Template.forecast.helpers({
 		return Forecasts.findOne();},
 
 	selectF : function(){
-		return forecast.data[Session.get('getF')].data;
+		return Forecasts.findOne().data[Session.get('getF')].data;
 	}
 
+});
+
+Template.forecast.onRendered({
+	Session.set('getF','hourly');
 });

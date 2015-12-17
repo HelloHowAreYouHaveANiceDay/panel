@@ -7,3 +7,7 @@ Template.forecast.helpers({
 	}
 
 });
+
+Template.forecast.onRendered(function(){
+	Session.set('getF','hourly');
+});

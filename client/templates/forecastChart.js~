@@ -1,0 +1,20 @@
+Template.forecastChart.onRendered({
+	var svg, width = 500, height = 200, x;
+
+	svg = d3.select('#forecastChart-wrapper')
+		.append('svg')
+		.attr('width',width)
+		.attr('height',height);
+
+	var draw = function(update){
+		
+	};
+});
+
+Template.forecastChart.helpers({
+	data : function(){
+		var f = Forecasts.findOne();
+		return Modules.client.mapForecast(f.data.currently);
+	}
+
+});
