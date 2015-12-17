@@ -2,9 +2,8 @@ Template.forecast.helpers({
 	forecast : function(){
 		return Forecasts.findOne();},
 
-	},
-	forecastDate : function(){
-		var t = tModules.client.convertTime(this.time);
-		return t
+	selectF : function(){
+		return forecast.data[Session.get('getF')].data;
 	}
+
 });

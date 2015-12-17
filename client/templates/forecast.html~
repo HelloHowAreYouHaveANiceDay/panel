@@ -14,7 +14,8 @@
 	<th>temperature</th>
 	<th>precipitation type</th>
 	<th>wind speed</th>
-	<th>precipitation intensity </th>
+	<th>cloud cover</th>
+	<th>humidity</th>
 </tr>
 {{#with forecast.data.currently}}
 	{{> currentForecast}}

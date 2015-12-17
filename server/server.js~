@@ -1,20 +1,16 @@
 Meteor.methods({
 	getForecast : function(){
 		var date = moment();
-		var forecastString = 'https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7146,-74.0071,'+ date.format();
 	var forecast = HTTP.get(
-		forecastString
+		'https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7146,-74.0071,'+ date.format()
 		);
-	console.log(forecastString);
-
 		if(Forecasts.find().count() === 0){
 			var forecast_id = Forecasts.insert(forecast);	
 			console.log(forecast_id);
 		}else{
 			var f = Forecasts.findOne();
-			Forecasts.remove(f._id)
-			console.log(f._id + "removed");
-			Forecasts.insert(forecast,function(error){
+			console.log(f._id);
+			Forecasts.update(f._id,forecast,function(error){
 				if(error){
 					console.log(error.reason);
 			

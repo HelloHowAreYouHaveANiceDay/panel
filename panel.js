@@ -9,11 +9,15 @@ if (Meteor.isClient) {
   });
 
   Template.hello.events({
-    'click button': function () {
+    'click .update-forecast': function () {
       // increment the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1)
 	Meteor.call('getForecast');
-    }
+    },
+	'click .selection' : function(d){
+		console.log(d.target.value);
+		Session.set("getF", d.target.value);
+	}
   });
 }
 
