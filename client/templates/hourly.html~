@@ -5,5 +5,9 @@
 	<td>{{this.summary}}</td>
 	<td>{{this.icon}}</td>
 	<td>{{this.temperature}}</td>
+		<td>{{this.precipType}}</td>
+	<td>{{this.windSpeed}}</td>
+	<td>{{this.cloudCover}}</td>
+	<td>{{this.humidity}}</td>
 	</tr>
 </template>

@@ -25,10 +25,15 @@ Meteor.methods({
 		};
 
 		for(i=0;i<insertArray.length;i++){
-			Forecasts.insert(insertArray[i]);	
-		};
+		Forecasts.update(Forecasts.find().fetch()[i], insertArray[i]);	
+			};
 	
-
+		console.log( 
+				
+				insertArray[0]
+				
+				
+				);
 
 		//sort data for currently/daily/hourly
 		//insert/update

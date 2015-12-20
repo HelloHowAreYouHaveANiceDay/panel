@@ -8,6 +8,7 @@
 	</td>
 	</tr>
 	<tr>
+		<th>category</th>
 	<th>time</th>
 	<th>summary</th>
 	<th>icon</th>
@@ -17,13 +18,10 @@
 	<th>cloud cover</th>
 	<th>humidity</th>
 </tr>
-{{#with forecast.data.currently}}
-	{{> currentForecast}}
-	{{/with}}
-	{{#each selectF}}
+	{{#each forecast}}
 	{{> hourlyForecast}}
 	{{/each}}
-<p>{{forecast.data.timezone}}</p>
+<p></p>
 
-{{>forecastChart}}
+
 </template>
