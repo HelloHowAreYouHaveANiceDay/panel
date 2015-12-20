@@ -8,6 +8,6 @@ Template.forecast.helpers({
 
 });
 
-Template.forecast.onRendered({
+Template.forecast.onRendered(function(){
 	Session.set('getF','hourly');
 });

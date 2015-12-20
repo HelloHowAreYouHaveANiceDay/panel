@@ -2,7 +2,7 @@ Meteor.methods({
 	getForecast : function(){
 		var date = moment();
 	var forecast = HTTP.get(
-		'https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7146,-74.0071,'+ date.format()
+		'https://api.forecast.io/forecast/ffae42c8469ee5f004266e3aad899da5/40.7131116,-74.01317030000001'
 		);
 		if(Forecasts.find().count() === 0){
 			var forecast_id = Forecasts.insert(forecast);	
@@ -19,5 +19,10 @@ Meteor.methods({
 			});
 			console.log('presssed');
 		}
-	}
-});                             
+	};
+    
+});         
+
+
+
+

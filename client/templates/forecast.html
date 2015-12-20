@@ -20,7 +20,7 @@
 {{#with forecast.data.currently}}
 	{{> currentForecast}}
 	{{/with}}
-	{{#each selectF}}
+	{{#each forecast}}
 	{{> hourlyForecast}}
 	{{/each}}
 <p>{{forecast.data.timezone}}</p>

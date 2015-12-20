@@ -1,5 +1,5 @@
 let mapForecast = (d) => {
-	return (_.keys(d),_.values(d));
+	return (_.pairs(d));
 
 };
 
