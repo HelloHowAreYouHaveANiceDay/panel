@@ -25,7 +25,7 @@ Meteor.methods({
 		};
 
 		for(i=0;i<insertArray.length;i++){
-		Forecasts.update(Forecasts.findOne(i), insertArray[i]);	
+		Forecasts.update(Forecasts.find().fetch()[i], insertArray[i]);	
 			};
 	
 		console.log( 

@@ -12,7 +12,7 @@ if (Meteor.isClient) {
     'click .update-forecast': function () {
       // increment the counter when button is clicked
       Session.set('counter', Session.get('counter') + 1)
-	Meteor.call('getForecast');
+	Meteor.call('updateForecasts');
     },
 	'click .selection' : function(d){
 		console.log(d.target.value);

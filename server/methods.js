@@ -23,11 +23,17 @@ Meteor.methods({
 			f.category = "hourly";
 			insertArray.push(f);
 		};
+		
+		if(Forecasts.find().count() === 0){
+			for(i=0;i<insertArray.length;i++){
+			Forecasts.insert(insertArray[i]);
+			};
+		}else{
 
 		for(i=0;i<insertArray.length;i++){
 		Forecasts.update(Forecasts.find().fetch()[i], insertArray[i]);	
 			};
-	
+		}
 		console.log( 
 				
 				insertArray[0]

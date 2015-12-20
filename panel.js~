@@ -16,7 +16,7 @@ if (Meteor.isClient) {
     },
 	'click .selection' : function(d){
 		console.log(d.target.value);
-	
+		Session.set("getF", d.target.value);
 	}
   });
 }
