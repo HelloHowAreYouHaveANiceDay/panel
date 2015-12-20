@@ -1,4 +1,5 @@
 <template name="forecast">
+<div class='chart'></div>
 <tr>
 	<td>
 	The forcast is: 
@@ -8,7 +9,7 @@
 	</td>
 	</tr>
 	<tr>
-		<th>category</th>
+	<th>category</th>
 	<th>time</th>
 	<th>summary</th>
 	<th>icon</th>

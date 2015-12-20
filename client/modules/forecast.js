@@ -1,6 +1,11 @@
-let mapForecast = (d) => {
-	return (_.keys(d),_.values(d));
-
+let getTime = () => {
+	var f =	Forecasts.find({category: Session.get('getF')},{sort:{'time':1}}).fetch();
+	var fa = []
+	for (i=0;i < f.length;i++){
+	 fa.push(f[i].temperature)
+	}
+	return fa;
 };
 
-Modules.client.mapForecast = mapForecast;
+Modules.client.getTime = getTime
+

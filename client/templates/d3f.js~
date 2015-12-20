@@ -1,16 +1,23 @@
-Template.d3f.onRendered(
-		function(){
-	var a = new Array()
+Template.d3f.onRendered(function(){
+	
 
-	_.each(Forecasts.findOne().data.daily.data, function(obj){
-	a.push(obj.time);
-	});
+	var svg, width = 500, height = 75, x;
 
-	console.log('d3f loaded');
+    svg = d3.select('.chart').append('svg')
+      .attr('width', width)
+      .attr('height', height);
 
-var data = a;
-
-console.log(_.isArray(data));
-console.log(data);
-
+    var drawCircles = function (update) {
+      var data = Modules.client.getTime();
+      var circles = svg.selectAll('circle').data(data);
+      if (!update) {
+        circles = circles.enter().append('circle')
+          .attr('cx', function (d, i) { return x(i); })
+          .attr('cy', height / 2);
+      } else {
+        circles = circles.transition().duration(1000);
+      }
+      circles.attr('r', function (d) { return d; });
+    };
+	
  });
