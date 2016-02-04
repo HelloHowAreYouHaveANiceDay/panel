@@ -1,7 +1,0 @@
-Template.currentForecast.helpers({
-	getForecastDate : function(t){
-		Modules.client.convertTime(t);
-		console.log(this.time);
-		return d;
-	}
-	});

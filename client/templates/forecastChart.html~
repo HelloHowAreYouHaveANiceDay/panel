@@ -1,7 +1,0 @@
-<template name="forecastChart">
-	<div class="forecastChart-wrapper">
-		{{#constant}}
-			{{data}}
-		{{/constant}}
-	</div>
-</template>
